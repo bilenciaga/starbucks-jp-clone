@@ -1,0 +1,85 @@
+@import '../sass/mixins.scss';
+
+.header {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 10px 0px;
+}
+
+.navbar {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @include r(pc) {
+    padding: 2rem 0rem 2rem 4rem;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+      display: none;
+
+    & > * {
+      @include r(pc) {
+        margin-left: 4rem;
+      }
+    }
+  }
+
+
+  &__pc {
+    display: none;
+
+    @include r(pc) {
+      display: flex;
+      align-items: center;
+    }
+
+    svg {
+      cursor: pointer;
+      margin-right: 3rem;
+    }
+
+    img {
+      cursor: pointer;
+    }
+
+    &-stories {
+      width: 14rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-reserve {
+      width: 14rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  &__logo {
+    img {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  &__phone-tablet {
+    display: flex;
+    align-items: center;
+
+    @include r(pc) {
+      display: none;
+    }
+  }
+
+  &__hamburger {
+    cursor: pointer;
+  }
+}
