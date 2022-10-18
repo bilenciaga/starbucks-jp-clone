@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Sidebar from './Sidebar'
 // hamburger
 import { Twirl as Hamburger } from 'hamburger-react'
 // scss
@@ -13,9 +14,11 @@ import { BsFillCartFill } from "react-icons/bs"
 import { MdLocationOn } from "react-icons/md"
 import { FaUserCircle } from "react-icons/fa"
 
-const Navbar = () => {
 
-  const [isOpen, setOpen] = useState(false)
+
+const Navbar = () => {
+  
+  const [isOpen, setOpen] = useState('false');
 
   return (
     <header className='header'>
@@ -43,9 +46,11 @@ const Navbar = () => {
         <div className="navbar__phone-tablet">
           <TfiSearch size={28} style={{color: 'black', marginTop:'.3rem' , marginRight:'3rem'}}/>
           <BsFillCartFill size={30} style={{color: 'black' , marginRight:'2.2rem'}}/>
-          <Hamburger size={24} className='navbar__hamburger'toggled={isOpen} toggle={setOpen} />
+          <Hamburger size={24} className='navbar__hamburger' toggled={isOpen} toggle={setOpen}/>
+          <aside className={`${isOpen ? 'active' : ''}`}>
+            <Sidebar />
+          </aside>
         </div>
-
       </nav>
     </header>
   )

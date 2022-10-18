@@ -1,7 +1,7 @@
 @import '../sass/mixins.scss';
 
 .header {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 10px 0px;
+  width: 100%;
 }
 
 .navbar {
@@ -9,7 +9,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  position: relative;
+  z-index: 99999;
 
   @include r(pc) {
     padding: 2rem 0rem 2rem 4rem;
@@ -81,5 +82,21 @@
 
   &__hamburger {
     cursor: pointer;
+  }
+}
+
+aside {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80vw;
+  height: calc(100% - 68px);
+  background: white;
+  transition: all .4s;
+  transform: translateX(100%);
+  z-index: 0;
+
+  &.active {
+    transform: translateX(0);
   }
 }
