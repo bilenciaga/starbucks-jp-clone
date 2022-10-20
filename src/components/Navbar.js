@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Sidebar from './Sidebar'
+import MenuItems from './MenuItems'
 // hamburger
 import { Twirl as Hamburger } from 'hamburger-react'
 // scss
@@ -18,7 +19,19 @@ import { FaUserCircle } from "react-icons/fa"
 
 const Navbar = () => {
   
-  const [isOpen, setOpen] = useState('false');
+  const [isOpen, setOpen] = useState(false);
+
+  const [isNavbarMenuClicked, setNavbarMenuClicked] = useState(false);
+  const [isNavbarServiceClicked, setNavbarServiceClicked] = useState(false);
+
+
+  const handleNavbarMenuClick = () => {
+    setNavbarMenuClicked(!isNavbarMenuClicked);
+  }
+
+  const handleNavbarServiceClick = () => {
+    setNavbarServiceClicked(!isNavbarServiceClicked);
+  }
 
   return (
     <header className='header'>
@@ -26,7 +39,7 @@ const Navbar = () => {
         <div className="navbar__left">
             <img src={logo} alt="logo" className='navbar__logo'/>
             <div className="navbar__link">
-              <button>メニュー</button>
+              <button onClick={handleNavbarMenuClick}>メニュー</button>
               <button>サービス</button>
               <button>リワード</button>
             </div>
@@ -50,6 +63,10 @@ const Navbar = () => {
           <aside className={`${isOpen ? 'active' : ''}`}>
             <Sidebar />
           </aside>
+        </div>
+
+        <div className={`${isNavbarMenuClicked ? 'navbar__menu active' : 'navbar__menu'}`}>
+        <MenuItems handleNavbarMenuClick={handleNavbarMenuClick}/>
         </div>
       </nav>
     </header>

@@ -1,3 +1,98 @@
-.menuItems_header{
-  
+@import '../sass/mixins.scss';
+
+.menuItems{
+  &__back {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  cursor: pointer;
+
+  @include r(pc) {
+    display: none;
+  }
+
+  button {
+    margin: 0rem auto;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+    }
+  }
+
+  &__list {
+    padding: 2.5rem 2rem;
+
+    @include r(pc) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-item {
+      margin: 1rem 0rem;
+      font-size: 1.6rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+
+      img {
+        border-radius: 50%;
+        width: 6.5rem;
+        height: 6.5rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &__onlineStore {
+    padding: 2.5rem 2rem;
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+
+    &-heading {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+
+      span {
+        margin-right: 1rem;
+      }
+    }
+
+    &-items {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        max-width: 26rem;
+
+        img {
+          margin-right: 1rem;
+          border-radius: 30%;
+          width: 6.5rem;
+          height: 6.5rem;
+        }
+
+        p{
+          font-size: 1.4rem;
+        }
+
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 0rem 5rem 2rem;
+  }
 }
+

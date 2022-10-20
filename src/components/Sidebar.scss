@@ -44,8 +44,27 @@
   background: white;
   transition: all .4s;
   transform: translateX(100%);
+  opacity: 0;
 
   &.active {
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.sidebar__service {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80vw;
+  height: 100vh;
+  background: white;
+  transition: all .4s;
+  transform: translateX(100%);
+  opacity: 0;
+
+  &.active {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

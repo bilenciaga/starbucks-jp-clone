@@ -22,13 +22,16 @@
   }
 
   &__link {
-      display: none;
+    display: none;
 
     & > * {
-      @include r(pc) {
         margin-left: 4rem;
-      }
     }
+
+    @include r(pc) {
+      display: flex;
+    }
+
   }
 
 
@@ -99,4 +102,20 @@ aside {
   &.active {
     transform: translateX(0);
   }
+}
+
+.navbar__menu {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: calc(100% - 80px);
+  background: white;
+  transition: all .4s;
+  transform: translateY(-1000px);
+  z-index: 1;
+  
+  &.active {
+    transform: translateY(0);
+  }
+
 }
