@@ -34,7 +34,6 @@ const Navbar = () => {
   }
 
   return (
-    <header className='header'>
       <nav className='navbar'>
         <div className="navbar__left">
             <img src={logo} alt="logo" className='navbar__logo'/>
@@ -66,10 +65,9 @@ const Navbar = () => {
         </div>
 
         <div className={`${isNavbarMenuClicked ? 'navbar__menu active' : 'navbar__menu'}`}>
-        <MenuItems handleNavbarMenuClick={handleNavbarMenuClick}/>
+          <MenuItems handleNavbarMenuClick={handleNavbarMenuClick}/>
         </div>
       </nav>
-    </header>
   )
 }
 

@@ -28,38 +28,38 @@ const MenuItems = ({handleSidebarMenuClick}) => {
   ];
 
   return (
-    <>
+    <div className='menuItems'>
       <div className='menuItems__back' onClick={handleSidebarMenuClick}>
         <MdNavigateBefore  size={30}/>
         <button>メニュー</button>
       </div>
 
-      <ul className='menuItems__list'>
+      <div className='menuItems__list'>
         {menuItemsData.map((menuItem) => {
           return (
-            <li key={menuItem.id} className='menuItems__list-item'>
+            <a  href={menuItem.url} key={menuItem.id}className='menuItems__list-item'>
               <img src={menuItem.img} alt={menuItem.name} />
-              <a href={menuItem.url}>{menuItem.name}</a>
-            </li>
+              <p>{menuItem.name}</p>
+            </a>
           )
         })}
-      </ul>
+      </div>
 
       <div className="menuItems__onlineStore">
         <div className="menuItems__onlineStore-heading">
           <span>ONLINE STORE</span>
           <span>季節のおすすめ</span>
         </div>
-        <ul className="menuItems__onlineStore-items">
+        <div className="menuItems__onlineStore-items">
         {onlineItems.map((onlineItem) => {
           return (
-          <li key={onlineItem.id} className="menuItems__onlineStore-items-item">
+          <a href='' key={onlineItem.id} className="menuItems__onlineStore-items-item">
             <img src={onlineItem.img} alt={onlineItem.name} />
-            <p>{onlineItem.name}<span>¥{onlineItem.price}</span></p>
-          </li>
+            <p>{onlineItem.name}<span>¥ {onlineItem.price}</span></p>
+          </a>  
           )
         })}
-        </ul>
+        </div>
       </div>
 
       <div className="menuItems__footer">
@@ -67,7 +67,7 @@ const MenuItems = ({handleSidebarMenuClick}) => {
         <a href="https://product.starbucks.co.jp/allergy/?nid=mm">アレルゲン・栄養成分・原料原産地情報</a>
         <a href="https://starbucks-faq.force.com/s/?nid=mm">よくあるご質問・お問い合わせ</a>
       </div>
-    </>
+    </div>
   )
 }
 

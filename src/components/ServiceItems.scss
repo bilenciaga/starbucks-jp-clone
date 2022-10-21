@@ -1,0 +1,26 @@
+@import '../sass/mixins.scss';
+.serviceItems{
+
+  @include r(pc) {
+    width: 100vw;
+  }
+
+  &__back {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  cursor: pointer;
+
+  @include r(pc) {
+    display: none;
+  }
+
+  button {
+    margin: 0rem auto;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+    }
+  }
+}

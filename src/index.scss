@@ -1,3 +1,8 @@
+@import './sass/mixins.scss';
+
+//font
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
 *,
 *::after,
 *::before {
@@ -9,10 +14,17 @@
 
 html {
   font-size: 62.5%; //1rem=1px
+  font-family: 'Noto Sans JP', sans-serif;
+
+  @include r(pc) {
+    font-size: 75%;
+  }
+
 }
 
 body {
   box-sizing: border-box; 
+  line-height: 2.4rem;
 }
 
 button {
