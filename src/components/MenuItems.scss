@@ -34,7 +34,7 @@
     }
 
     &-item {
-      margin: 1rem 0rem;
+      margin: 2rem 0rem;
       font-size: 1.6rem;
       display: flex;
       flex-direction: row;
@@ -81,38 +81,34 @@
     }
     
     &-heading {
-      font-size: 1.6rem;
       margin-bottom: 3rem;
 
       @include r(pc) {
+        font-size: 1.2rem;
         width: 16rem;
         display: flex;
         flex-direction: column;
         text-align: end;
-        font-size: 1.2rem;
         margin-bottom: 0rem;
         margin-right: 3rem;
+        letter-spacing: .2rem;
       }
 
       span {
         margin-right: 1rem;
         color: grey;
-        font-size: 1.4rem;
 
         &:nth-child(1) {
           font-weight: 900;
-          letter-spacing: .2rem;
         }
 
         &:nth-child(2) {
           font-weight: 100;
-          letter-spacing: .2rem;
         }
 
         @include r(pc) {
           margin-right: 0rem;
           line-height: 1.75;
-          letter-spacing: .2rem;
         }
       }
     }
@@ -165,7 +161,7 @@
 
     @include r(pc) {
       flex-direction: row;
-      gap: 3rem;
+      gap: 5rem;
       justify-content: center;
     }
   }

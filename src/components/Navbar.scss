@@ -109,14 +109,29 @@ aside {
   overflow: hidden;
   top: 0;
   left: 0;
-  height:0rem;
   background: white;
-  transition: all .4s;
+  opacity: 0;
   z-index: 1;
   margin-top: 7.5rem;
+  transition: all .3s ease;
   
   &.active {
-    height: 65rem ;
+    opacity: 1;
   }
+}
 
+.navbar__service {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background: white;
+  opacity: 0;
+  z-index: 1;
+  margin-top: 7.5rem;
+  transition: all .3s ease;
+  
+  &.active {
+    opacity: 1;
+  }
 }

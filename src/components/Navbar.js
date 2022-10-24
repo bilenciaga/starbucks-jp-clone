@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Sidebar from './Sidebar'
 import MenuItems from './MenuItems'
+import ServiceItems from './ServiceItems'
 // hamburger
 import { Twirl as Hamburger } from 'hamburger-react'
 // scss
@@ -27,10 +28,12 @@ const Navbar = () => {
 
   const handleNavbarMenuClick = () => {
     setNavbarMenuClicked(!isNavbarMenuClicked);
+    setNavbarServiceClicked(null);
   }
 
   const handleNavbarServiceClick = () => {
     setNavbarServiceClicked(!isNavbarServiceClicked);
+    setNavbarMenuClicked(null);
   }
 
   return (
@@ -39,7 +42,7 @@ const Navbar = () => {
             <img src={logo} alt="logo" className='navbar__logo'/>
             <div className="navbar__link">
               <button onClick={handleNavbarMenuClick}>メニュー</button>
-              <button>サービス</button>
+              <button onClick={handleNavbarServiceClick}>サービス</button>
               <button>リワード</button>
             </div>
         </div>
@@ -66,6 +69,10 @@ const Navbar = () => {
 
         <div className={`${isNavbarMenuClicked ? 'navbar__menu active' : 'navbar__menu'}`}>
           <MenuItems handleNavbarMenuClick={handleNavbarMenuClick}/>
+        </div>
+
+        <div className={`${isNavbarServiceClicked ? 'navbar__service active' : 'navbar__service'}`}>
+          <ServiceItems handleNavbarServiceClick={handleNavbarServiceClick}/>
         </div>
       </nav>
   )

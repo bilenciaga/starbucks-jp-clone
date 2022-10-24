@@ -9,19 +9,19 @@ const MenuItems = ({handleSidebarMenuClick}) => {
   const onlineItems = [
     {
       id:1,
-      name:'スターバックス リザーブ® ロースタリー デミ キャスクコレクション',
+      title:'スターバックス リザーブ® ロースタリー デミ キャスクコレクション',
       img:'https://asset.menu.starbucks.co.jp/public/sku_images/4524785516625/4524785516625_1_s.jpg',
       price:'11,000',
     },
     {
       id:2,
-      name:'スターバックス® オータム ブレンド',
+      title:'スターバックス® オータム ブレンド',
       img:'https://asset.menu.starbucks.co.jp/public/sku_images/4524785184008/4524785184008_1_s.jpg',
       price:'1,650',
     },
     {
       id:3,
-      name:'ハロウィン2022キャニスターフーディーキャット',
+      title:'ハロウィン2022キャニスターフーディーキャット',
       img:'https://asset.menu.starbucks.co.jp/public/sku_images/4524785508484/4524785508484_1_s.jpg',
       price:'2,800',
     }
@@ -38,8 +38,8 @@ const MenuItems = ({handleSidebarMenuClick}) => {
         {menuItemsData.map((menuItem) => {
           return (
             <a  href={menuItem.url} key={menuItem.id}className='menuItems__list-item'>
-              <img src={menuItem.img} alt={menuItem.name} />
-              <p>{menuItem.name}</p>
+              <img src={menuItem.img} alt={menuItem.title} />
+              <p>{menuItem.title}</p>
             </a>
           )
         })}
@@ -53,9 +53,9 @@ const MenuItems = ({handleSidebarMenuClick}) => {
         <div className="menuItems__onlineStore-items">
         {onlineItems.map((onlineItem) => {
           return (
-          <a href='' key={onlineItem.id} className="menuItems__onlineStore-items-item">
-            <img src={onlineItem.img} alt={onlineItem.name} />
-            <p>{onlineItem.name}<span>¥ {onlineItem.price}</span></p>
+          <a href='#' key={onlineItem.id} className="menuItems__onlineStore-items-item">
+            <img src={onlineItem.img} alt={onlineItem.title} />
+            <p>{onlineItem.title}<span>¥{onlineItem.price}</span></p>
           </a>  
           )
         })}
