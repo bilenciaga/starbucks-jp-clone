@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  z-index: 99999;
+  z-index: 999998;
 
   @include r(pc) {
     padding: 2rem 0rem 2rem 4rem;
@@ -16,6 +16,14 @@
   &__left {
     display: flex;
     align-items: center;
+
+    button:hover {
+      color: #00754a;
+    }
+
+    button.active {
+      color: #00754a;
+    }
   }
 
   &__link {
@@ -106,32 +114,28 @@ aside {
 
 .navbar__menu {
   position: absolute;
-  overflow: hidden;
-  top: 0;
+  top: 7.5rem;
   left: 0;
   background: white;
-  opacity: 0;
-  z-index: 1;
-  margin-top: 7.5rem;
-  transition: all .3s ease;
+  height: 0px;
+  transition: height .3s ease;
+  overflow: hidden;
   
   &.active {
-    opacity: 1;
+    height: 500px;
   }
 }
 
 .navbar__service {
   position: absolute;
-  overflow: hidden;
-  top: 0;
+  top: 7.5rem;
   left: 0;
   background: white;
-  opacity: 0;
-  z-index: 1;
-  margin-top: 7.5rem;
-  transition: all .3s ease;
+  height: 0px;
+  transition: height .3s ease;
+  overflow: hidden;
   
   &.active {
-    opacity: 1;
+    height: 540px;
   }
 }

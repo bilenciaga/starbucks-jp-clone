@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState} from 'react'
 import Sidebar from './Sidebar'
 import MenuItems from './MenuItems'
 import ServiceItems from './ServiceItems'
@@ -25,15 +25,14 @@ const Navbar = () => {
   const [isNavbarMenuClicked, setNavbarMenuClicked] = useState(false);
   const [isNavbarServiceClicked, setNavbarServiceClicked] = useState(false);
 
-
   const handleNavbarMenuClick = () => {
     setNavbarMenuClicked(!isNavbarMenuClicked);
-    setNavbarServiceClicked(null);
+    setNavbarServiceClicked(false);
   }
 
   const handleNavbarServiceClick = () => {
     setNavbarServiceClicked(!isNavbarServiceClicked);
-    setNavbarMenuClicked(null);
+    setNavbarMenuClicked(false);
   }
 
   return (
@@ -41,8 +40,8 @@ const Navbar = () => {
         <div className="navbar__left">
             <img src={logo} alt="logo" className='navbar__logo'/>
             <div className="navbar__link">
-              <button onClick={handleNavbarMenuClick}>メニュー</button>
-              <button onClick={handleNavbarServiceClick}>サービス</button>
+              <button className={`${isNavbarMenuClicked ? 'active' : null}`} onClick={handleNavbarMenuClick}>メニュー</button>
+              <button className={`${isNavbarServiceClicked ? 'active' : null}`} onClick={handleNavbarServiceClick}>サービス</button>
               <button>リワード</button>
             </div>
         </div>
