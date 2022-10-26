@@ -21,8 +21,6 @@ const ServiceItems = ({handleSidebarServiceClick}) => {
         <p>My Starbucks</p>
       </div>
 
-      <hr style={{opacity:".3"}}></hr>
-
       <div className="serviceItems__list-items">
       {serviceItemsData.map((serviceItem) => {
           return (
@@ -39,11 +37,11 @@ const ServiceItems = ({handleSidebarServiceClick}) => {
       <div className="serviceItems__howTo-1st">
         <h4>HOW TO STARBUCKS</h4>
         <ul className='serviceItems__howTo-list'>
-          <li><a href="//www.starbucks.co.jp/howto/?nid=mm"><p>スターバックスの楽しみ方</p></a></li>
-          <li><a href="//www.starbucks.co.jp/howto/togo/?nid=mm"><p>STARBUCKS TO GO</p></a></li>
-          <li><a href="//dyf.starbucks.co.jp/?nid=mm"><p>お気に入りの一杯を探そう</p></a></li>
-          <li><a href="//www.starbucks.co.jp/howto/store/tumbler.html?nid=mm"><p>タンブラーを楽しむ</p></a></li>
-          <li><a href="//www.starbucks.co.jp/event/?nid=mm"><p>イベント情報</p></a></li>
+          <li><a href="//www.starbucks.co.jp/howto/?nid=mm">スターバックスの楽しみ方</a></li>
+          <li><a href="//www.starbucks.co.jp/howto/togo/?nid=mm">STARBUCKS TO GO</a></li>
+          <li><a href="//dyf.starbucks.co.jp/?nid=mm">お気に入りの一杯を探そう</a></li>
+          <li><a href="//www.starbucks.co.jp/howto/store/tumbler.html?nid=mm">タンブラーを楽しむ</a></li>
+          <li><a href="//www.starbucks.co.jp/event/?nid=mm">イベント情報</a></li>
         </ul>
       </div>
 
