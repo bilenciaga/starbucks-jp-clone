@@ -1,4 +1,4 @@
-import { useState} from 'react'
+import { useState, useEffect} from 'react'
 import Sidebar from './Sidebar'
 import MenuItems from './MenuItems'
 import ServiceItems from './ServiceItems'
@@ -34,6 +34,14 @@ const Navbar = () => {
     setNavbarServiceClicked(!isNavbarServiceClicked);
     setNavbarMenuClicked(false);
   }
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [isOpen]);
 
   return (
       <nav className='navbar'>
