@@ -9,7 +9,6 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit; 
-  
 }
 
 html {
@@ -25,6 +24,7 @@ html {
 body {
   box-sizing: border-box; 
   line-height: 2.4rem;
+  overflow-x: hidden;
 }
 
 button {
