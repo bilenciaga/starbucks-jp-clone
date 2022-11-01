@@ -1,0 +1,78 @@
+.brewing {
+    padding-top: 55px;
+    padding-bottom: 55px;
+    overflow-x: hidden;
+
+  &__title {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: .4rem;
+  }
+   // flex flox-row overflow-x-scroll overflow-y-hidden w-max h-full no-scrollbar scroll-smooth 
+  &__carousel {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+      &-cards {
+        display: flex;
+        flex-direction: row;
+        overflow-x: hidden;
+        padding: 0rem 2rem 0rem 2rem;
+        margin: -15px;
+        padding: 15px;
+      }
+
+      &-card {
+        position: relative;
+        min-width: 200px;
+        box-shadow: 0 1px 3px rgb(0 0 0 / 16%);
+        background-color: #fff;
+        border-radius: 12px;
+        overflow-y: hidden;
+        margin-left: 2rem;
+      }
+    &-arrow {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      bottom: 150px;
+    }
+
+    &-leftArrow {
+      font-size: 30px;
+      background: white;
+      padding: 1rem;
+      border-radius: 50%;
+      cursor: pointer;
+      margin-left: 2rem;
+      box-shadow: 0 1px 3px rgb(0 0 0 / 16%);
+    }
+
+    &-rightArrow {
+      font-size: 30px;
+      background: white;
+      padding: 1rem;
+      border-radius: 50%;
+      cursor: pointer;
+      margin-right: 2rem;
+      box-shadow: 0 1px 3px rgb(0 0 0 / 16%);
+    }
+  }
+
+  &__bottom {
+    margin-top: 20px;
+  }
+}
+
+.brewing__carourel-cardImg {
+  img{
+    object-fit: cover;
+    height: 100%;
+    object-position: cover;
+    width: 100%;
+  }
+}
