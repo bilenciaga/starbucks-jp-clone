@@ -1,0 +1,49 @@
+@import '../sass/mixins.scss';
+
+.hero {
+  width: 100vw;
+
+  img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+
+  &__img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: .6rem;
+
+    @include r(pc) {
+      width: 100%;
+      gap: .6rem;
+      grid-template-columns: calc(50vw - 4px) calc(50vw - 4px);
+      grid-template-rows: repeat(2, calc(25vw - 6px));
+      background-color: #edebe9;
+    }
+
+    &-1 {
+      grid-row: unset;
+      grid-column: 1 / -1;
+
+      @include r(pc) {
+        grid-column: unset;
+        grid-row: 1 / -1;
+      }
+    }
+  }
+}
+
+.sp-hidden {
+    @include r(tab) {
+      display: none;
+    }
+}
+
+.pc-hidden{
+  @include r(pc) {
+    display: none;
+  }
+}
