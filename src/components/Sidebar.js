@@ -8,7 +8,7 @@ import stories from '../assets/img/stories.svg'
 import reserve from '../assets/img/reserve.svg'
 
 //react
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import MenuItems from './MenuItems'
 import ServiceItems from './ServiceItems'
 
