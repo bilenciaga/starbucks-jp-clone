@@ -105,7 +105,6 @@ aside {
   background: white;
   transition: all .4s;
   transform: translateX(100%);
-  z-index: 0;
 
   &.active {
     transform: translateX(0);
@@ -136,6 +135,6 @@ aside {
   overflow: hidden;
   
   &.active {
-    height: 540px;
+    height: 470px;
   }
 }
