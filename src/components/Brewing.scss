@@ -8,6 +8,7 @@
     text-align: center;
     font-size: 2rem;
     letter-spacing: .4rem;
+    margin-bottom: 4rem;
   }
    // flex flox-row overflow-x-scroll overflow-y-hidden w-max h-full no-scrollbar scroll-smooth 
   &__carousel {
@@ -65,9 +66,26 @@
 
   &__bottom {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0rem 2rem 0rem 2rem;
+
+    &-item {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 77px;
+        margin-right: 1rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
   }
 }
-
 .brewing__carourel-cardImg {
   img{
     object-fit: cover;
