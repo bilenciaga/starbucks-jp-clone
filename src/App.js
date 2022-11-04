@@ -9,6 +9,7 @@ function App() {
       <Navbar />
       <Hero />
       <Brewing />
+      <div className="line-gray"></div>
     </>
   );
 }
